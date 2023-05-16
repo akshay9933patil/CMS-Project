@@ -1,0 +1,1327 @@
+{
+	"info": {
+		"_postman_id": "19de2e09-acec-48b2-abbb-2c79b9831f5d",
+		"name": "CMS Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET and Retrieve Requests",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs",
+					"_postman_id": "3a49aa01-93b0-4f02-9d1d-4984cd6e012d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token e7e18a043bdc4a16c4069b8c50d4ad47325b524a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/",
+						"description": "Only GET Public blogs of others and own\r\nIf request.user is same as owner then only show private blogs as well."
+					},
+					"response": [
+						{
+							"id": "24102b6d-4061-4c95-bc9a-1b4a06b0fa3f",
+							"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token e7e18a043bdc4a16c4069b8c50d4ad47325b524a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:04:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1063"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"title1\",\n        \"description\": \"description1\",\n        \"content\": \"content1\",\n        \"owner\": \"ashwini@123\",\n        \"created_at\": \"2023-05-14T16:34:03.991829Z\",\n        \"updated_at\": \"2023-05-14T16:34:03.991829Z\",\n        \"status\": \"Public\",\n        \"like\": 4\n    },\n    {\n        \"id\": 2,\n        \"title\": \"title2\",\n        \"description\": \"description2\",\n        \"content\": \"content2\",\n        \"owner\": \"ashwini@123\",\n        \"created_at\": \"2023-05-14T16:35:06.173544Z\",\n        \"updated_at\": \"2023-05-14T16:35:06.173544Z\",\n        \"status\": \"Public\",\n        \"like\": 5\n    },\n    {\n        \"id\": 3,\n        \"title\": \"title3\",\n        \"description\": \"description3\",\n        \"content\": \"content3\",\n        \"owner\": \"mayur@123\",\n        \"created_at\": \"2023-05-14T16:35:38.609527Z\",\n        \"updated_at\": \"2023-05-14T16:35:38.609527Z\",\n        \"status\": \"Public\",\n        \"like\": 0\n    },\n    {\n        \"id\": 4,\n        \"title\": \"title4\",\n        \"description\": \"description4\",\n        \"content\": \"content4\",\n        \"owner\": \"snehal@123\",\n        \"created_at\": \"2023-05-14T16:36:09.439372Z\",\n        \"updated_at\": \"2023-05-14T16:36:09.439372Z\",\n        \"status\": \"Public\",\n        \"like\": 0\n    },\n    {\n        \"id\": 6,\n        \"title\": \"title5\",\n        \"description\": \"description5 modified\",\n        \"content\": \"content5\",\n        \"owner\": \"shubham@123\",\n        \"created_at\": \"2023-05-15T18:33:06.162161Z\",\n        \"updated_at\": \"2023-05-15T19:07:21.599439Z\",\n        \"status\": \"Private\",\n        \"like\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs if owner is not request.user",
+					"_postman_id": "c9875339-afec-4bf6-966a-11402657ff91",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/"
+					},
+					"response": [
+						{
+							"id": "546c7d06-9add-4b50-95c9-e6433c39b76c",
+							"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs if owner is not request.user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:02:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "842"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"title1\",\n        \"description\": \"description1\",\n        \"content\": \"content1\",\n        \"owner\": \"ashwini@123\",\n        \"created_at\": \"2023-05-14T16:34:03.991829Z\",\n        \"updated_at\": \"2023-05-14T16:34:03.991829Z\",\n        \"status\": \"Public\",\n        \"like\": 4\n    },\n    {\n        \"id\": 2,\n        \"title\": \"title2\",\n        \"description\": \"description2\",\n        \"content\": \"content2\",\n        \"owner\": \"ashwini@123\",\n        \"created_at\": \"2023-05-14T16:35:06.173544Z\",\n        \"updated_at\": \"2023-05-14T16:35:06.173544Z\",\n        \"status\": \"Public\",\n        \"like\": 5\n    },\n    {\n        \"id\": 3,\n        \"title\": \"title3\",\n        \"description\": \"description3\",\n        \"content\": \"content3\",\n        \"owner\": \"mayur@123\",\n        \"created_at\": \"2023-05-14T16:35:38.609527Z\",\n        \"updated_at\": \"2023-05-14T16:35:38.609527Z\",\n        \"status\": \"Public\",\n        \"like\": 0\n    },\n    {\n        \"id\": 4,\n        \"title\": \"title4\",\n        \"description\": \"description4\",\n        \"content\": \"content4\",\n        \"owner\": \"snehal@123\",\n        \"created_at\": \"2023-05-14T16:36:09.439372Z\",\n        \"updated_at\": \"2023-05-14T16:36:09.439372Z\",\n        \"status\": \"Public\",\n        \"like\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is owner",
+					"_postman_id": "dc4746f4-73ee-4998-917c-3ac3f4ababf7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token e7e18a043bdc4a16c4069b8c50d4ad47325b524a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/6/",
+						"description": "will retrieve single blog if blog is public \r\nif not public then check whether request.user is owner"
+					},
+					"response": [
+						{
+							"id": "368df5ff-47bb-4199-81cc-f097fac60d8f",
+							"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is owner",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token e7e18a043bdc4a16c4069b8c50d4ad47325b524a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/6/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:05:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 6,\n    \"title\": \"title5\",\n    \"description\": \"description5 modified\",\n    \"content\": \"content5\",\n    \"owner\": \"shubham@123\",\n    \"created_at\": \"2023-05-15T18:33:06.162161Z\",\n    \"updated_at\": \"2023-05-15T19:07:21.599439Z\",\n    \"status\": \"Private\",\n    \"like\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is not owner",
+					"_postman_id": "f3bfb3b4-0ce5-4480-84bf-a64d6e11bcbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/6/"
+					},
+					"response": [
+						{
+							"id": "e8512f66-4aaf-4479-a34d-3ac47b8e0740",
+							"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is not owner",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/6/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:10:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"details\": {}\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "1fbd5e86-b9ea-4c58-8eba-387dae13deb5"
+		},
+		{
+			"name": "PATCH  and DELETE blogs",
+			"item": [
+				{
+					"name": "request.user is owner of the post",
+					"_postman_id": "6a4abd0e-c452-465f-8e1a-21753f7d324c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token bb5672b747a0d7ea5daaec2866f6c6be30e8a069",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title4 modify",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "content4 modify",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description4 modified",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Public",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/4/",
+						"description": "request.user is owner of the post"
+					},
+					"response": [
+						{
+							"id": "d91301f2-cf45-4c17-ae87-4a25c3ba48bd",
+							"name": "http://127.0.0.1:8000/post/post/ Patch data when request.user is owner of the post",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token bb5672b747a0d7ea5daaec2866f6c6be30e8a069",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title4 modify",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "content4 modify",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description4 modified",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Public",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/4/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:20:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 4,\n    \"title\": \"title4 modify\",\n    \"description\": \"description4 modified\",\n    \"content\": \"content4 modify\",\n    \"owner\": \"snehal@123\",\n    \"created_at\": \"2023-05-14T16:36:09.439372Z\",\n    \"updated_at\": \"2023-05-16T07:20:52.967905Z\",\n    \"status\": \"Public\"\n}"
+						}
+					]
+				},
+				{
+					"name": "request.user is NOT  owner of the post",
+					"_postman_id": "1d08fbd8-3604-497d-bec9-32e283ba0945",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title4 modify",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "content4 modify",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description4 modified",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Public",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/4/",
+						"description": "when request.user is NOT  owner of the post"
+					},
+					"response": [
+						{
+							"id": "8b060d01-2d9e-42b6-aa45-46eba3bf303f",
+							"name": "http://127.0.0.1:8000/post/post/ Patch data when request.user is NOT  owner of the post",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title4 modify",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "content4 modify",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description4 modified",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Public",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/4/"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:23:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "request.user is NOT  owner of the post",
+					"_postman_id": "1ce617e9-1e7a-4ebd-9f9c-7739898e50ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title4 modify",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "content4 modify",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description4 modified",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Public",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/post/post/4/"
+					},
+					"response": [
+						{
+							"id": "d2c3982a-0b2d-46e9-bdc3-73daba951524",
+							"name": "Delete data when request.user is NOT  owner of the post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 91ef65e5e4587086ffec6654a5b68d651b46b901",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title4 modify",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "content4 modify",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description4 modified",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Public",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/post/post/4/"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:25:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "5dc59691-e47e-4d65-ae7c-312332013f34"
+		},
+		{
+			"name": "User Creation nad Token Generation",
+			"item": [
+				{
+					"name": "User Creation with encrypted password",
+					"_postman_id": "e068e2ac-f0ac-4ebc-8f2a-86c2c859b189",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "virat@123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "virat@123",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "virat",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/auth/user/"
+					},
+					"response": [
+						{
+							"id": "f2ed1be8-628c-46ee-86f5-d378d05f94e7",
+							"name": "User Creation with encrypted password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "virat@123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "virat@123",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "virat",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/auth/user/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:33:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"username\": \"virat@123\",\n    \"first_name\": \"virat\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Token Generation",
+					"_postman_id": "4b1fb23a-dc6c-43eb-b227-1bd5b961cdd4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "virat@123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "virat@123",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "http://127.0.0.1:8000/auth/token/",
+						"description": "Only single token is generated for each user"
+					},
+					"response": [
+						{
+							"id": "903a99fc-11a6-4bbc-a1a3-0f6b36c4e75d",
+							"name": "Token Generation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "virat@123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "virat@123",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "http://127.0.0.1:8000/auth/token/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:35:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"token\": \"6685145df3aff7ce1baf5c42ac4f724dbcdc7159\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "e226bced-39a9-4de4-86f9-46a96e92260b"
+		},
+		{
+			"name": "Add like and Remove Like",
+			"item": [
+				{
+					"name": "Like is added to post by user",
+					"_postman_id": "f6ba7fc0-b7e6-4b2b-b770-31684795fba4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token b1f7ce6e953dbdf1b1ebc51829b7bcc88223a459",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/post/post_like/4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"post",
+								"post_like",
+								"4",
+								""
+							],
+							"query": [
+								{
+									"key": "post",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "2e62a56f-7fcc-44cc-824d-0d0e55895c03",
+							"name": "Like is added to post by user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token b1f7ce6e953dbdf1b1ebc51829b7bcc88223a459",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/post_like/4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"post_like",
+										"4",
+										""
+									],
+									"query": [
+										{
+											"key": "post",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:39:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": 15,\n    \"created\": \"2023-05-16T07:39:16.230039Z\",\n    \"post\": 4\n}"
+						},
+						{
+							"id": "3934535a-cd49-4c95-8491-46fc6bccee66",
+							"name": "Like is removed to post by user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token b1f7ce6e953dbdf1b1ebc51829b7bcc88223a459",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/post_like/4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"post_like",
+										"4",
+										""
+									],
+									"query": [
+										{
+											"key": "post",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 May 2023 07:40:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"details\": \"like removed\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "fced8c55-9654-404f-8ee0-322ec68513ae"
+		}
+	]
+}
