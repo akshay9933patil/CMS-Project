@@ -10,7 +10,7 @@
 			"item": [
 				{
 					"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs",
-					"_postman_id": "3a49aa01-93b0-4f02-9d1d-4984cd6e012d",
+					"id": "3a49aa01-93b0-4f02-9d1d-4984cd6e012d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -25,10 +25,7 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {
-								"formdata": {}
-							}
+							"formdata": []
 						},
 						"url": "http://127.0.0.1:8000/post/post/",
 						"description": "Only GET Public blogs of others and own\r\nIf request.user is same as owner then only show private blogs as well."
@@ -48,10 +45,7 @@
 								],
 								"body": {
 									"mode": "formdata",
-									"formdata": [],
-									"options": {
-										"formdata": {}
-									}
+									"formdata": []
 								},
 								"url": "http://127.0.0.1:8000/post/post/"
 							},
@@ -108,7 +102,7 @@
 				},
 				{
 					"name": "http://127.0.0.1:8000/post/post/ LIST all Public Blogs if owner is not request.user",
-					"_postman_id": "c9875339-afec-4bf6-966a-11402657ff91",
+					"id": "c9875339-afec-4bf6-966a-11402657ff91",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -123,10 +117,7 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {
-								"formdata": {}
-							}
+							"formdata": []
 						},
 						"url": "http://127.0.0.1:8000/post/post/"
 					},
@@ -145,10 +136,7 @@
 								],
 								"body": {
 									"mode": "formdata",
-									"formdata": [],
-									"options": {
-										"formdata": {}
-									}
+									"formdata": []
 								},
 								"url": "http://127.0.0.1:8000/post/post/"
 							},
@@ -205,7 +193,7 @@
 				},
 				{
 					"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is owner",
-					"_postman_id": "dc4746f4-73ee-4998-917c-3ac3f4ababf7",
+					"id": "dc4746f4-73ee-4998-917c-3ac3f4ababf7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -220,10 +208,7 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {
-								"formdata": {}
-							}
+							"formdata": []
 						},
 						"url": "http://127.0.0.1:8000/post/post/6/",
 						"description": "will retrieve single blog if blog is public \r\nif not public then check whether request.user is owner"
@@ -243,10 +228,7 @@
 								],
 								"body": {
 									"mode": "formdata",
-									"formdata": [],
-									"options": {
-										"formdata": {}
-									}
+									"formdata": []
 								},
 								"url": "http://127.0.0.1:8000/post/post/6/"
 							},
@@ -303,7 +285,7 @@
 				},
 				{
 					"name": "http://127.0.0.1:8000/post/post/ Retrive single Public Blog request.owner is not owner",
-					"_postman_id": "f3bfb3b4-0ce5-4480-84bf-a64d6e11bcbc",
+					"id": "f3bfb3b4-0ce5-4480-84bf-a64d6e11bcbc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -318,10 +300,7 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {
-								"formdata": {}
-							}
+							"formdata": []
 						},
 						"url": "http://127.0.0.1:8000/post/post/6/"
 					},
@@ -340,10 +319,7 @@
 								],
 								"body": {
 									"mode": "formdata",
-									"formdata": [],
-									"options": {
-										"formdata": {}
-									}
+									"formdata": []
 								},
 								"url": "http://127.0.0.1:8000/post/post/6/"
 							},
@@ -399,14 +375,14 @@
 					]
 				}
 			],
-			"_postman_id": "1fbd5e86-b9ea-4c58-8eba-387dae13deb5"
+			"id": "1fbd5e86-b9ea-4c58-8eba-387dae13deb5"
 		},
 		{
 			"name": "PATCH  and DELETE blogs",
 			"item": [
 				{
 					"name": "request.user is owner of the post",
-					"_postman_id": "6a4abd0e-c452-465f-8e1a-21753f7d324c",
+					"id": "6a4abd0e-c452-465f-8e1a-21753f7d324c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -442,10 +418,7 @@
 									"value": "Public",
 									"type": "text"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "http://127.0.0.1:8000/post/post/4/",
 						"description": "request.user is owner of the post"
@@ -486,10 +459,7 @@
 											"value": "Public",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "http://127.0.0.1:8000/post/post/4/"
 							},
@@ -546,7 +516,7 @@
 				},
 				{
 					"name": "request.user is NOT  owner of the post",
-					"_postman_id": "1d08fbd8-3604-497d-bec9-32e283ba0945",
+					"id": "1d08fbd8-3604-497d-bec9-32e283ba0945",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -582,10 +552,7 @@
 									"value": "Public",
 									"type": "text"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "http://127.0.0.1:8000/post/post/4/",
 						"description": "when request.user is NOT  owner of the post"
@@ -626,10 +593,7 @@
 											"value": "Public",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "http://127.0.0.1:8000/post/post/4/"
 							},
@@ -686,12 +650,12 @@
 				},
 				{
 					"name": "request.user is NOT  owner of the post",
-					"_postman_id": "1ce617e9-1e7a-4ebd-9f9c-7739898e50ee",
+					"id": "1ce617e9-1e7a-4ebd-9f9c-7739898e50ee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
@@ -722,12 +686,9 @@
 									"value": "Public",
 									"type": "text"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
-						"url": "http://127.0.0.1:8000/post/post/4/"
+						"url": "http://127.0.0.1:8000/post/post/"
 					},
 					"response": [
 						{
@@ -765,10 +726,7 @@
 											"value": "Public",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "http://127.0.0.1:8000/post/post/4/"
 							},
@@ -824,14 +782,14 @@
 					]
 				}
 			],
-			"_postman_id": "5dc59691-e47e-4d65-ae7c-312332013f34"
+			"id": "5dc59691-e47e-4d65-ae7c-312332013f34"
 		},
 		{
 			"name": "User Creation nad Token Generation",
 			"item": [
 				{
 					"name": "User Creation with encrypted password",
-					"_postman_id": "e068e2ac-f0ac-4ebc-8f2a-86c2c859b189",
+					"id": "e068e2ac-f0ac-4ebc-8f2a-86c2c859b189",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -856,10 +814,7 @@
 									"value": "virat",
 									"type": "text"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "http://127.0.0.1:8000/auth/user/"
 					},
@@ -888,10 +843,7 @@
 											"value": "virat",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "http://127.0.0.1:8000/auth/user/"
 							},
@@ -948,7 +900,7 @@
 				},
 				{
 					"name": "Token Generation",
-					"_postman_id": "4b1fb23a-dc6c-43eb-b227-1bd5b961cdd4",
+					"id": "4b1fb23a-dc6c-43eb-b227-1bd5b961cdd4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -968,10 +920,7 @@
 									"value": "virat@123",
 									"type": "text"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "http://127.0.0.1:8000/auth/token/",
 						"description": "Only single token is generated for each user"
@@ -996,10 +945,7 @@
 											"value": "virat@123",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "http://127.0.0.1:8000/auth/token/"
 							},
@@ -1055,14 +1001,14 @@
 					]
 				}
 			],
-			"_postman_id": "e226bced-39a9-4de4-86f9-46a96e92260b"
+			"id": "e226bced-39a9-4de4-86f9-46a96e92260b"
 		},
 		{
 			"name": "Add like and Remove Like",
 			"item": [
 				{
 					"name": "Like is added to post by user",
-					"_postman_id": "f6ba7fc0-b7e6-4b2b-b770-31684795fba4",
+					"id": "f6ba7fc0-b7e6-4b2b-b770-31684795fba4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1084,10 +1030,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/post/post_like/4/",
@@ -1137,10 +1080,7 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": {
 									"raw": "http://127.0.0.1:8000/post/post_like/4/",
@@ -1238,10 +1178,7 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": {
 									"raw": "http://127.0.0.1:8000/post/post_like/4/",
@@ -1321,7 +1258,7 @@
 					]
 				}
 			],
-			"_postman_id": "fced8c55-9654-404f-8ee0-322ec68513ae"
+			"id": "fced8c55-9654-404f-8ee0-322ec68513ae"
 		}
 	]
 }
