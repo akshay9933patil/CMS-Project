@@ -1161,7 +1161,7 @@
 							"id": "3934535a-cd49-4c95-8491-46fc6bccee66",
 							"name": "Like is removed to post by user",
 							"originalRequest": {
-								"method": "POST",
+								"method": "DELETE",
 								"header": [
 									{
 										"key": "Authorization",
