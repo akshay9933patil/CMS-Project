@@ -562,7 +562,7 @@
 							"id": "8b060d01-2d9e-42b6-aa45-46eba3bf303f",
 							"name": "http://127.0.0.1:8000/post/post/ Patch data when request.user is NOT  owner of the post",
 							"originalRequest": {
-								"method": "PATCH",
+								"method": "DELETE",
 								"header": [
 									{
 										"key": "Authorization",
